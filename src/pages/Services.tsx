@@ -43,7 +43,7 @@ const Services = () => {
       title: 'Sodding',
       shortDescription: 'Professional sod installation for instant lawn transformation.',
       features: ['Soil preparation', 'Premium sod selection', 'Professional installation', 'Watering guidelines'],
-      image: '/img/sodding.jpg'
+      image: '/img/Sodding.jpg'
     },
     {
       id: 'mulching',
@@ -51,7 +51,7 @@ const Services = () => {
       title: 'Mulching',
       shortDescription: 'Quality mulching services to protect plants and enhance garden aesthetics.',
       features: ['Organic mulch selection', 'Proper application', 'Weed suppression', 'Moisture retention'],
-      image: '/img/mulch.jpg'
+      image: '/img/Mulch.jpg'
     },
     {
       id: 'garden-maintenance',

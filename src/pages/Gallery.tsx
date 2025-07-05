@@ -48,7 +48,7 @@ const Gallery = () => {
     },
     {
       id: 6,
-      src: '/img/mulch.jpg',
+      src: '/img/Mulch.jpg',
       alt: 'Mulching and garden bed preparation',
       category: 'Mulching',
       size: 'medium'
@@ -62,7 +62,7 @@ const Gallery = () => {
     },
     {
       id: 7.5,
-      src: '/img/mulch.jpg',
+      src: '/img/Mulch.jpg',
       alt: 'Mulching and soil improvement',
       category: 'Mulching',
       size: 'small'
@@ -76,7 +76,7 @@ const Gallery = () => {
     },
     {
       id: 9,
-      src: '/img/sodding.jpg',
+      src: '/img/Sodding.jpg',
       alt: 'Sodding and lawn installation',
       category: 'Sodding',
       size: 'large'
