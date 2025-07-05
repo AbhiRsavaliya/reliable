@@ -19,7 +19,7 @@ const Services = () => {
       title: 'Landscape Design',
       shortDescription: 'Professional landscape design services including both hardscaping and softscaping solutions.',
       features: ['Design consultation', '3D landscape planning', 'Plant selection', 'Hardscape integration'],
-      image: 'img/land.jpg'
+      image: '/img/land.jpg'
     },
     {
       id: 'lawn-mowing',
@@ -27,7 +27,7 @@ const Services = () => {
       title: 'Lawn Mowing',
       shortDescription: 'Regular lawn maintenance services to keep your grass healthy and beautiful.',
       features: ['Weekly/bi-weekly mowing', 'Edge trimming', 'Grass collection', 'Seasonal scheduling'],
-      image: 'img/lownm.jpg'
+      image: '/img/lownm.jpg'
     },
     {
       id: 'aeration',
@@ -35,7 +35,7 @@ const Services = () => {
       title: 'Aeration',
       shortDescription: 'Lawn aeration services to improve soil health and promote better grass growth.',
       features: ['Core aeration', 'Overseeding', 'Soil testing', 'Seasonal timing'],
-      image: 'img/ar.jpg'
+      image: '/img/ar.jpg'
     },
     {
       id: 'sodding',
@@ -43,7 +43,7 @@ const Services = () => {
       title: 'Sodding',
       shortDescription: 'Professional sod installation for instant lawn transformation.',
       features: ['Soil preparation', 'Premium sod selection', 'Professional installation', 'Watering guidelines'],
-      image: 'img/sodding.jpg'
+      image: '/img/sodding.jpg'
     },
     {
       id: 'mulching',
@@ -51,7 +51,7 @@ const Services = () => {
       title: 'Mulching',
       shortDescription: 'Quality mulching services to protect plants and enhance garden aesthetics.',
       features: ['Organic mulch selection', 'Proper application', 'Weed suppression', 'Moisture retention'],
-      image: 'img/mulch.jpg'
+      image: '/img/mulch.jpg'
     },
     {
       id: 'garden-maintenance',
@@ -59,7 +59,7 @@ const Services = () => {
       title: 'Garden Maintenance',
       shortDescription: 'Comprehensive garden care services to keep your plants thriving.',
       features: ['Pruning and trimming', 'Weeding', 'Plant health monitoring', 'Seasonal cleanup'],
-      image: 'img/gardenm.avif'
+      image: '/img/gardenm.avif'
     },
     {
       id: 'fertilization',
@@ -67,7 +67,7 @@ const Services = () => {
       title: 'Fertilization',
       shortDescription: 'Professional fertilization programs to promote healthy plant growth.',
       features: ['Soil analysis', 'Custom fertilizer programs', 'Seasonal applications', 'Organic options'],
-      image: 'img/furti.jpg'
+      image: '/img/furti.jpg'
     },
     {
       id: 'driveway-wash',
@@ -75,7 +75,7 @@ const Services = () => {
       title: 'Driveway Wash',
       shortDescription: 'Professional pressure washing services for driveways and walkways.',
       features: ['High-pressure cleaning', 'Stain removal', 'Eco-friendly detergents', 'Protective sealing'],
-      image: 'img/driv.jpg'
+      image: '/img/driv.jpg'
     },
     {
       id: 'fencing',
@@ -83,7 +83,7 @@ const Services = () => {
       title: 'Fencing',
       shortDescription: 'Custom fencing solutions for privacy, security, and aesthetic appeal.',
       features: ['Various fence materials', 'Custom design', 'Professional installation', 'Maintenance services'],
-      image: 'img/Fencing.jpg'
+      image: '/img/Fencing.jpg'
     },
     {
       id: 'interlocking',
@@ -91,7 +91,7 @@ const Services = () => {
       title: 'Interlocking',
       shortDescription: 'Professional interlocking stone installation for patios and driveways.',
       features: ['Design consultation', 'Base preparation', 'Precision installation', 'Sealing and finishing'],
-      image: 'img/inter.jpeg'
+      image: '/img/inter.jpeg'
     },
     {
       id: 'pathways',
@@ -99,7 +99,7 @@ const Services = () => {
       title: 'Pathways & Walkways',
       shortDescription: 'Beautiful and functional pathways, walkways, and driveway installations.',
       features: ['Custom design', 'Material selection', 'Proper drainage', 'Long-lasting construction'],
-      image: 'img/walkway.jpg'
+      image: '/img/walkway.jpg'
     }
   ];
 
@@ -227,11 +227,11 @@ const Services = () => {
                 className="flex flex-col items-center text-center cursor-pointer hover:bg-green-50 rounded-lg p-2 transition"
                 onClick={() => {
                   setShowLandscapeModal(false);
-                  setTimeout(() => navigate('/services/soft-landscaping', { state: { image: 'img/land.jpg' } }), 200);
+                  setTimeout(() => navigate('/services/soft-landscaping', { state: { image: '/img/land.jpg' } }), 200);
                 }}
               >
                 <img
-                  src="img/land.jpg"
+                  src="/img/land.jpg"
                   alt="Soft Landscaping"
                   className="rounded-lg mb-3 w-full h-32 object-cover"
                 />
@@ -244,7 +244,7 @@ const Services = () => {
                 className="flex flex-col items-center text-center cursor-pointer hover:bg-green-50 rounded-lg p-2 transition"
                 onClick={() => {
                   setShowLandscapeModal(false);
-                  setTimeout(() => navigate('/services/hard-landscaping', { state: { image: 'img/land.jpg' } }), 200);
+                  setTimeout(() => navigate('/services/hard-landscaping', { state: { image: '/img/land.jpg' } }), 200);
                 }}
               >
                 <img

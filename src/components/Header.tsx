@@ -73,7 +73,7 @@ const Header = () => {
           <div className="flex justify-between items-center h-24">
             <Link to="/" className="flex items-center space-x-2">
               <img
-                src="img/Rlogo.png"
+                src="/img/Rlogo.png"
                 alt="Reliable Landscaping & Yard Care Logo"
                 className="h-36 w-auto md:h-40 header-logo-animate"
               />

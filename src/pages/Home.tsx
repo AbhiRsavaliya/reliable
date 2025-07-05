@@ -23,7 +23,7 @@ const Home = () => {
     return (
       <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
         <img
-          src="img/Rlogo.png"
+          src="/img/Rlogo.png"
           alt="Reliable Landscaping & Yard Care Logo"
           className="hidden sm:block w-48 h-48 sm:w-64 sm:h-64 animate-preloader-zoom"
           style={{ animation: 'preloader-zoom 2s ease-in-out infinite alternate' }}
@@ -126,7 +126,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(img/hero.webp)'
+            backgroundImage: 'url(/img/hero.webp)'
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -135,7 +135,7 @@ const Home = () => {
         <div className="relative z-10 text-center text-white max-w-4xl px-4">
           {/* Logo instead of text */}
           <img
-            src="img/Rlogo.png"
+            src="/img/Rlogo.png"
             alt="Reliable Landscaping & Yard Care"
             className="mx-auto mb-8 w-40 md:w-56"
             style={{ maxHeight: '120px' }}

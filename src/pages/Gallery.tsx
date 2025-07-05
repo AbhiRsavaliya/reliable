@@ -13,133 +13,133 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: 'img/walkway.jpg',
+      src: '/img/walkway.jpg',
       alt: 'Beautiful landscape design with stone pathway',
       category: 'Landscape Design',
       size: 'large' // Large featured image
     },
     {
       id: 2,
-      src: 'img/lownm.jpg',
+      src: '/img/lownm.jpg',
       alt: 'Professional lawn care and maintenance',
       category: 'Lawn Care',
       size: 'medium'
     },
     {
       id: 3,
-      src: 'img/gardenm.avif',
+      src: '/img/gardenm.avif',
       alt: 'Garden maintenance and pruning',
       category: 'Garden Maintenance',
       size: 'small'
     },
     {
       id: 4,
-      src: 'img/walkway.jpg',
+      src: '/img/walkway.jpg',
       alt: 'Stone pathway and walkway installation',
       category: 'Pathways',
       size: 'small'
     },
     {
       id: 5,
-      src: 'img/inter.jpeg',
+      src: '/img/inter.jpeg',
       alt: 'Interlocking stone driveway',
       category: 'Interlocking',
       size: 'large'
     },
     {
       id: 6,
-      src: 'img/mulch.jpg',
+      src: '/img/mulch.jpg',
       alt: 'Mulching and garden bed preparation',
       category: 'Mulching',
       size: 'medium'
     },
     {
       id: 7,
-      src: 'img/Fencing.jpg',
+      src: '/img/Fencing.jpg',
       alt: 'Fence installation and repair',
       category: 'Fencing',
       size: 'small'
     },
     {
       id: 7.5,
-      src: 'img/mulch.jpg',
+      src: '/img/mulch.jpg',
       alt: 'Mulching and soil improvement',
       category: 'Mulching',
       size: 'small'
     },
     {
       id: 8,
-      src: 'img/driv.jpg',
+      src: '/img/driv.jpg',
       alt: 'Driveway cleaning and maintenance',
       category: 'Driveway Wash',
       size: 'medium'
     },
     {
       id: 9,
-      src: 'img/sodding.jpg',
+      src: '/img/sodding.jpg',
       alt: 'Sodding and lawn installation',
       category: 'Sodding',
       size: 'large'
     },
     {
       id: 10,
-      src: 'img/land.jpg',
+      src: '/img/land.jpg',
       alt: 'Complete landscape transformation',
       category: 'Landscape Design',
       size: 'small'
     },
     {
       id: 10,
-      src: 'img/lownm.jpg',
+      src: '/img/lownm.jpg',
       alt: 'Complete landscape transformation',
       category: 'lown mowing ',
       size: 'small'
     },
     {
       id: 11,
-      src: 'img/gardenm.avif',
+      src: '/img/gardenm.avif',
       alt: 'Garden design and planting',
       category: 'Garden Maintenance',
       size: 'medium'
     },
     {
       id: 12,
-      src: 'img/furti.jpg',
+      src: '/img/furti.jpg',
       alt: 'Lawn fertilization and care',
       category: 'Fertilization',
       size: 'small'
     },
     {
       id: 10,
-      src: 'img/land.jpg',
+      src: '/img/land.jpg',
       alt: 'Complete landscape transformation',
       category: 'Landscape Design',
       size: 'small'
     },
     {
       id: 13,
-      src: 'img/land.jpg',
+      src: '/img/land.jpg',
       alt: 'Modern landscape architecture',
       category: 'Landscape Design',
       size: 'large'
     },
     {
       id: 14,
-      src: 'img/gardenm.avif',
+      src: '/img/gardenm.avif',
       alt: 'Seasonal garden cleanup',
       category: 'Garden Maintenance',
       size: 'small'
     },
     {
       id: 10,
-      src: 'img/land.jpg',
+      src: '/img/land.jpg',
       alt: 'Complete landscape transformation',
       category: 'Landscape Design',
       size: 'small'
     },
     {
       id: 15,
-      src: 'img/walkway.jpg',
+      src: '/img/walkway.jpg',
       alt: 'Professional hedge trimming',
       category: 'Garden Maintenance',
       size: 'medium'
@@ -197,7 +197,7 @@ const Gallery = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('img/gallaryhero.jpg')"
+            backgroundImage: "url('/img/gallaryhero.jpg')"
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-60"></div>

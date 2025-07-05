@@ -12,7 +12,7 @@ const ServiceDetail = () => {
       icon: <Palette className="h-16 w-16 text-green-600" />,
       title: 'Landscape Design',
       shortDescription: 'Professional landscape design services including both hardscaping and softscaping solutions.',
-      image: 'img/land.jpg',
+      image: '/img/land.jpg',
       detailedDescription: 'Transform your outdoor space with our comprehensive landscape design services. We specialize in creating beautiful, functional landscapes that enhance your property value and provide year-round enjoyment. Our expert designers work closely with you to understand your vision and create a custom plan that reflects your style while considering your property\'s unique characteristics.',
       process: [
         'Initial consultation and site analysis',
@@ -254,7 +254,7 @@ const ServiceDetail = () => {
       icon: <Hammer className="h-16 w-16 text-green-600" />,
       title: 'Hard Landscaping',
       shortDescription: 'Expert construction of patios, walkways, retaining walls, decks, and other non-living features.',
-      image: 'img/land.jpg',
+      image: '/img/land.jpg',
       detailedDescription: 'Our hard landscaping services provide the structure and function your outdoor space needs. We specialize in patios, walkways, retaining walls, decks, and more, using quality materials and expert craftsmanship to ensure durability and beauty.',
       process: [
         'Consultation and site assessment',
@@ -276,7 +276,7 @@ const ServiceDetail = () => {
       icon: <Leaf className="h-16 w-16 text-green-600" />,
       title: 'Soft Landscaping',
       shortDescription: 'Planting, turfing, flower beds, shrubs, trees, and other living elements to beautify your garden.',
-      image: 'img/land.jpg',
+      image: '/img/land.jpg',
       detailedDescription: 'Our soft landscaping services focus on the living elements of your garden. We provide expert planting, turfing, flower beds, shrubs, and tree installation to create a lush, vibrant landscape tailored to your preferences.',
       process: [
         'Consultation and garden planning',

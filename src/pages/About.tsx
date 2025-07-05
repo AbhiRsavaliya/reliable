@@ -4,17 +4,17 @@ import Footer from '../components/Footer';
 const founders = [
 	{
 		name: 'Abhijeet Savaliya',
-		img: 'img/founder1.jpg',
+		img: '/img/founder1.jpg',
 		role: 'Founder & CEO'
 	},
 	{
 		name: 'Priya Patel',
-		img: 'img/founder2.jpg',
+		img: '/img/founder2.jpg',
 		role: 'Co-Founder & Operations'
 	},
 	{
 		name: 'Rahul Sharma',
-		img: 'img/founder3.jpg',
+		img: '/img/founder3.jpg',
 		role: 'Co-Founder & Design Lead'
 	}
 ];
