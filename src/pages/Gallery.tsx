@@ -13,7 +13,7 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: '/img/walkway.jpg',
+      src: '/img/land.jpg',
       alt: 'Beautiful landscape design with stone pathway',
       category: 'Landscape Design',
       size: 'large' // Large featured image
@@ -92,7 +92,7 @@ const Gallery = () => {
       id: 10,
       src: '/img/lownm.jpg',
       alt: 'Complete landscape transformation',
-      category: 'lown mowing ',
+      category: 'Lawn Care',
       size: 'small'
     },
     {
@@ -151,7 +151,7 @@ const Gallery = () => {
 
   const filteredImages = selectedCategory === 'All' 
     ? galleryImages 
-    : galleryImages.filter(image => image.category === selectedCategory);
+    : galleryImages.filter(image => image.category.trim().toLowerCase() === selectedCategory.trim().toLowerCase());
 
   const getImageClasses = (size: string) => {
     switch (size) {

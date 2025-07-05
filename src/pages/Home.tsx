@@ -96,14 +96,14 @@ const Home = () => {
       {/* Social Media Widget */}
       <div className="fixed top-1/2 left-4 z-50 flex flex-col space-y-4 transform -translate-y-1/2">
         <a
-          href="https://www.facebook.com/"
+          href="https://www.facebook.com/share/1VgqM8UTSA/?mibextid=wwXIfr"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Facebook className="h-7 w-7 text-gray-400 hover:text-green-600 cursor-pointer transition-colors" />
         </a>
         <a
-          href="https://www.instagram.com/abhijeet_savaliya/"
+          href="https://www.instagram.com/reliablegreencare.service?igsh=N3h5dW8xMDBuejNk&utm_source=qr"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -126,7 +126,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(/img/hero.webp)'
+            backgroundImage: 'url(/img/main.jpg)'
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
