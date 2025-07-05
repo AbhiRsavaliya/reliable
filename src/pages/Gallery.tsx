@@ -13,7 +13,7 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: '/img/img/walkway.jpg',
+      src: '/img/walkway.jpg',
       alt: 'Beautiful landscape design with stone pathway',
       category: 'Landscape Design',
       size: 'large' // Large featured image
