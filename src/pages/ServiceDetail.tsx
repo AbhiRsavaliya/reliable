@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link, Navigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Phone, Mail } from 'lucide-react';
-import { Leaf, Scissors, Wind, Droplets, Shovel, Fence, Pickaxe, TreePine, Hammer, Palette, Truck } from 'lucide-react';
+import { Leaf, Scissors, Wind, Droplets, Shovel, Fence, Pickaxe, TreePine, Hammer, Palette, Truck, Snowflake, Leaf as LeafIcon } from 'lucide-react';
 
 const ServiceDetail = () => {
   const { serviceId } = useParams();
@@ -293,6 +293,50 @@ const ServiceDetail = () => {
         'Personalized garden design'
       ],
       pricing: 'Pricing varies by project. Contact us for a custom quote.'
+    },
+    'snow-removal': {
+      icon: <Snowflake className="h-16 w-16 text-green-600" />,
+      title: 'Snow Removal',
+      shortDescription: 'Efficient snow removal services to keep your property safe and accessible during winter.',
+      image: '/img/snow.jpg',
+      detailedDescription: 'Stay safe and worry-free during winter with our reliable snow removal services. We offer prompt and thorough clearing of driveways, walkways, and entrances, using professional equipment and eco-friendly de-icing solutions.',
+      process: [
+        '24/7 monitoring for snowfall events',
+        'Prompt dispatch of snow removal team',
+        'Driveway and walkway clearing',
+        'Salting and de-icing for safety',
+        'Optional seasonal contracts for peace of mind'
+      ],
+      benefits: [
+        'Safe and accessible property',
+        'Reduced risk of slips and falls',
+        'Timely and reliable service',
+        'Customizable plans for your needs',
+        'Professional equipment and staff'
+      ],
+      pricing: 'Contact us for a custom quote or seasonal contract options.'
+    },
+    'leaf-removal': {
+      icon: <LeafIcon className="h-16 w-16 text-green-600" />,
+      title: 'Leaf Removal',
+      shortDescription: 'Professional leaf removal to maintain a clean and healthy lawn in the fall.',
+      image: '/img/leafremoval.jpg',
+      detailedDescription: 'Keep your property looking its best in the fall with our comprehensive leaf removal services. We clear leaves from lawns, gardens, and hardscapes, ensuring healthy grass and a tidy appearance.',
+      process: [
+        'Assessment of property and leaf coverage',
+        'Leaf blowing and raking',
+        'Collection and eco-friendly disposal',
+        'Final cleanup of all surfaces',
+        'Optional recurring or one-time service'
+      ],
+      benefits: [
+        'Prevents lawn suffocation and mold',
+        'Improves curb appeal',
+        'Saves you time and effort',
+        'Eco-friendly disposal methods',
+        'Flexible scheduling'
+      ],
+      pricing: 'Starting from $60 per visit. Contact us for a custom quote.'
     }
   };
 
@@ -404,7 +448,7 @@ const ServiceDetail = () => {
               </Link>
               
               <a
-                href="tel:555-123-4567"
+                href="tel:+1 (365) 866-1119"
                 className="inline-flex items-center justify-center space-x-2 border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-600 hover:text-white transition-colors"
               >
                 <Phone className="h-5 w-5" />

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Leaf, Scissors, Wind, Droplets, Shovel, Fence, Pickaxe, TreePine, Hammer, Palette, Truck, ArrowRight, Facebook, Instagram, X as XIcon } from 'lucide-react';
+import { Leaf, Scissors, Wind, Droplets, Shovel, Fence, Pickaxe, TreePine, Hammer, Palette, Truck, ArrowRight, Facebook, Instagram, X as XIcon, Snowflake, Leaf as LeafIcon } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -100,6 +100,22 @@ const Services = () => {
       shortDescription: 'Beautiful and functional pathways, walkways, and driveway installations.',
       features: ['Custom design', 'Material selection', 'Proper drainage', 'Long-lasting construction'],
       image: '/img/walkway.jpg'
+    },
+    {
+      id: 'snow-removal',
+      icon: <Snowflake className="h-12 w-12 text-green-600" />,
+      title: 'Snow Removal',
+      shortDescription: 'Efficient snow removal services to keep your property safe and accessible during winter.',
+      features: ['Driveway and walkway clearing', 'Salting and de-icing', 'Prompt response', 'Seasonal contracts'],
+      image: '/img/snow.jpg'
+    },
+    {
+      id: 'leaf-removal',
+      icon: <LeafIcon className="h-12 w-12 text-green-600" />,
+      title: 'Leaf Removal',
+      shortDescription: 'Professional leaf removal to maintain a clean and healthy lawn in the fall.',
+      features: ['Lawn and garden cleanup', 'Leaf blowing and collection', 'Eco-friendly disposal', 'One-time or recurring'],
+      image: '/img/leaf.jpg'
     }
   ];
 
