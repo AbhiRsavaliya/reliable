@@ -152,7 +152,7 @@ const Header = () => {
           {/* Mobile Navigation with slower smooth transition */}
           <div
             className={`md:hidden overflow-hidden transition-all duration-700 ease-in-out ${
-              isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+              isMenuOpen ? 'max-h-[700px] opacity-100' : 'max-h-0 opacity-0'
             }`}
             style={{ willChange: 'max-height, opacity' }}
           >
