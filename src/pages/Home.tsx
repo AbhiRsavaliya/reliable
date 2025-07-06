@@ -22,7 +22,7 @@ const Home = () => {
 
   useEffect(() => {
     // Show preloader for 3 seconds
-    const timer = setTimeout(() => setLoading(false), 3000);
+    const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -38,7 +38,7 @@ const Home = () => {
     // Always prompt for location permission on refresh
     if (!('geolocation' in navigator)) return;
 
-    // Remove any cached permission by using getCurrentPosition directly
+    // Force prompt by calling getCurrentPosition (browser will ask every refresh if not "Always Allow")
     navigator.geolocation.getCurrentPosition(
       async (pos) => {
         try {
@@ -54,30 +54,30 @@ const Home = () => {
             data.address?.county ||
             ''
           ).toLowerCase();
-          // Check for "barrie and surrounding areas!" specifically
           if (
             address.includes('barrie and surrounding areas!') ||
             address.includes('barrie')
           ) {
             setLocationMsg("Hello! Our services are available for this location. Thank you for your interest!");
           } else {
-            setLocationMsg(null);
+            setLocationMsg("We'll best try to contact you. Thank Enjoy Your Visit");
           }
           setShowLocationMsg(true);
         } catch {
-          setLocationMsg(null);
-          setShowLocationMsg(false);
+          setLocationMsg("We'll best try to contact you. Thank Enjoy Your Visit");
+          setShowLocationMsg(true);
         }
       },
       () => {
-        setLocationMsg(null);
-        setShowLocationMsg(false);
+        setLocationMsg("We'll best try to contact you. Thank Enjoy Your Visit");
+        setShowLocationMsg(true);
       }
     );
   }, []);
 
   useEffect(() => {
     if (showLocationMsg && locationMsg) {
+      // Pause notification for 5 seconds, then hide
       const timeout = setTimeout(() => {
         setShowLocationMsg(false);
       }, 5000);
@@ -161,9 +161,9 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Location Notification */}
       {locationMsg && showLocationMsg && (
-        <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-in-out">
-          <div className="flex items-center gap-4 px-6 py-3 rounded-lg shadow-lg text-white font-semibold transition-all bg-green-600">
-            <span>{locationMsg}</span>
+        <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-in-out w-[90vw] max-w-md sm:max-w-lg">
+          <div className="flex items-center gap-4 px-6 py-2 rounded-lg shadow-lg text-white font-semibold transition-all bg-green-600 min-h-0 h-auto">
+            <span className="flex-1">{locationMsg}</span>
             <button
               onClick={() => setShowLocationMsg(false)}
               className="ml-2 px-3 py-1 rounded bg-white/20 hover:bg-white/40 text-white font-bold transition"
