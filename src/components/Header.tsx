@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, NavLink } from 'react-router-dom';
 import { Menu, X, TreePine, User, LogOut, ChevronDown } from 'lucide-react';
 import { auth } from '../firebase';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
@@ -40,7 +40,7 @@ const Header = () => {
 
   const navItems = [
     { path: '/', label: 'Home' },
-   
+    { path: '/about', label: 'About Us' },
     { path: '/services', label: 'Services' },
     { path: '/gallery', label: 'Gallery' },
     { path: '/contact', label: 'Contact' },
@@ -81,17 +81,18 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
               {navItems.map((item) => (
-                <Link
+                <NavLink
                   key={item.path}
                   to={item.path}
-                  className={`px-3 py-2 text-lg font-semibold transition-colors ${
-                    isActive(item.path)
-                      ? 'text-green-600 border-b-2 border-green-600'
-                      : 'text-gray-700 hover:text-green-600'
-                  }`}
+                  className={({ isActive }) =>
+                    (isActive
+                      ? 'text-green-600 font-bold'
+                      : 'text-gray-700 hover:text-green-600') +
+                    ' text-base md:text-lg transition-all duration-200'
+                  }
                 >
                   {item.label}
-                </Link>
+                </NavLink>
               ))}
             </nav>
 

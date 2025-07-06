@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link, Navigate, useLocation } from 'react-router-dom';
-import { ArrowLeft, CheckCircle, Phone, Mail } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Phone, Mail, Facebook, Instagram, X as XIcon } from 'lucide-react';
 import { Leaf, Scissors, Wind, Droplets, Shovel, Fence, Pickaxe, TreePine, Hammer, Palette, Truck, Snowflake, Leaf as LeafIcon } from 'lucide-react';
 
 const ServiceDetail = () => {
@@ -308,11 +308,11 @@ const ServiceDetail = () => {
         'Optional seasonal contracts for peace of mind'
       ],
       benefits: [
-        'Safe and accessible property',
+        'Keeps roads and paths clear',
         'Reduced risk of slips and falls',
-        'Timely and reliable service',
+        'Stops ice from forming',
         'Customizable plans for your needs',
-        'Professional equipment and staff'
+        'Makes places look neat and clean'
       ],
       pricing: 'Contact us for a custom quote or seasonal contract options.'
     },
@@ -358,6 +358,31 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Social Media Widget (left side, same as Home page) */}
+      <div className="fixed top-1/2 left-4 z-50 flex flex-col space-y-4 transform -translate-y-1/2">
+        <a
+          href="https://www.facebook.com/share/1VgqM8UTSA/?mibextid=wwXIfr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Facebook className="h-7 w-7 text-gray-400 hover:text-green-600 cursor-pointer transition-colors" />
+        </a>
+        <a
+          href="https://www.instagram.com/reliablegreencare.service?igsh=N3h5dW8xMDBuejNk&utm_source=qr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Instagram className="h-7 w-7 text-gray-400 hover:text-green-600 cursor-pointer transition-colors" />
+        </a>
+        <a
+          href="https://x.com/_abhijeet_0018"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <XIcon className="h-7 w-7 text-gray-400 hover:text-green-600 cursor-pointer transition-colors" />
+        </a>
+      </div>
+
       {/* Hero Section with Large Image */}
       <section className="relative h-96 overflow-hidden">
         <img

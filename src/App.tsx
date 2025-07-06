@@ -8,6 +8,7 @@ import ServiceDetail from './pages/ServiceDetail';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Auth from './pages/Auth';
+import About from './pages/About';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </main>
         <Footer />

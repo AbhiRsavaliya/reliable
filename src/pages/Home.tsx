@@ -5,6 +5,17 @@ import ContactWidget from '../components/ContactWidget';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const SERVICE_LOCATIONS = [
+  'barrie',
+  'barrie and surrounding areas!',
+  'vaughan',
+  'mississauga',
+  'richmond hill',
+  'caledon',
+  'brampton',
+  // add more as needed
+];
+
 const Home = () => {
   // Preloader state
   const [loading, setLoading] = useState(true);
@@ -18,6 +29,61 @@ const Home = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
+
+  // Location notification state
+  const [locationMsg, setLocationMsg] = useState<string | null>(null);
+  const [showLocationMsg, setShowLocationMsg] = useState(false);
+
+  useEffect(() => {
+    // Always prompt for location permission on refresh
+    if (!('geolocation' in navigator)) return;
+
+    // Remove any cached permission by using getCurrentPosition directly
+    navigator.geolocation.getCurrentPosition(
+      async (pos) => {
+        try {
+          const { latitude, longitude } = pos.coords;
+          const res = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
+          );
+          const data = await res.json();
+          const address = (
+            data.address?.city ||
+            data.address?.town ||
+            data.address?.village ||
+            data.address?.county ||
+            ''
+          ).toLowerCase();
+          // Check for "barrie and surrounding areas!" specifically
+          if (
+            address.includes('barrie and surrounding areas!') ||
+            address.includes('barrie')
+          ) {
+            setLocationMsg("Hello! Our services are available for this location. Thank you for your interest!");
+          } else {
+            setLocationMsg(null);
+          }
+          setShowLocationMsg(true);
+        } catch {
+          setLocationMsg(null);
+          setShowLocationMsg(false);
+        }
+      },
+      () => {
+        setLocationMsg(null);
+        setShowLocationMsg(false);
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    if (showLocationMsg && locationMsg) {
+      const timeout = setTimeout(() => {
+        setShowLocationMsg(false);
+      }, 5000);
+      return () => clearTimeout(timeout);
+    }
+  }, [showLocationMsg, locationMsg]);
 
   if (loading) {
     return (
@@ -93,6 +159,21 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      {/* Location Notification */}
+      {locationMsg && showLocationMsg && (
+        <div className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500 ease-in-out">
+          <div className="flex items-center gap-4 px-6 py-3 rounded-lg shadow-lg text-white font-semibold transition-all bg-green-600">
+            <span>{locationMsg}</span>
+            <button
+              onClick={() => setShowLocationMsg(false)}
+              className="ml-2 px-3 py-1 rounded bg-white/20 hover:bg-white/40 text-white font-bold transition"
+              aria-label="Close"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
       {/* Social Media Widget */}
       <div className="fixed top-1/2 left-4 z-50 flex flex-col space-y-4 transform -translate-y-1/2">
         <a
@@ -222,30 +303,43 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Don't just take our word for it - hear from our satisfied customers
+              Real feedback from our valued clients who trusted us to transform their outdoor spaces.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
-                <div className="flex items-center mb-4">
+              <div
+                key={index}
+                className="relative bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl p-8 flex flex-col items-center border border-green-100 hover:shadow-2xl transition-all duration-300"
+                style={{ minHeight: 340 }}
+              >
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
+                    className="w-20 h-20 rounded-full object-cover border-4 border-green-500 shadow-lg"
                   />
-                  <div>
-                    <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.location}</p>
+                </div>
+                <div className="mt-14 flex flex-col items-center">
+                  <div className="flex mb-2">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-700 italic text-lg text-center mb-4 leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="flex flex-col items-center">
+                    <span className="font-bold text-green-700">{testimonial.name}</span>
                   </div>
                 </div>
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+                  <svg width="40" height="40" fill="none" viewBox="0 0 40 40">
+                    <circle cx="20" cy="20" r="20" fill="#22c55e" fillOpacity="0.08"/>
+                    <path d="M13 25c0-4 3-7 7-7s7 3 7 7" stroke="#22c55e" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
                 </div>
-                <p className="text-gray-700 italic">"{testimonial.text}"</p>
               </div>
             ))}
           </div>

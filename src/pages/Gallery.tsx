@@ -314,11 +314,11 @@ const Gallery = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-green-600 mb-2">500+</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">10+</div>
               <div className="text-gray-600">Projects Completed</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-green-600 mb-2">10+</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">1</div>
               <div className="text-gray-600">Years Experience</div>
             </div>
             <div>
@@ -326,8 +326,8 @@ const Gallery = () => {
               <div className="text-gray-600">Satisfaction Rate</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-green-600 mb-2">50+</div>
-              <div className="text-gray-600">Awards Won</div>
+              <div className="text-4xl font-bold text-green-600 mb-2">10+</div>
+              <div className="text-gray-600">Happy customers</div>
             </div>
           </div>
         </div>

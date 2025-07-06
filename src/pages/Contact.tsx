@@ -253,8 +253,11 @@ const Contact = () => {
                   <h4 className="font-semibold text-gray-900">Canada County</h4>
                   <ul className="text-gray-600 text-sm space-y-1">
                     <li>Brampton</li>
-                    <li>Torentto</li>
-                    <li>Etocbicco</li>
+                    <li>vaughan</li>
+                    <li>Mississauga</li>
+                    <li>Richmond hill</li>
+                    <li>Caledon</li>
+                    <li>barrie And surrounding areas!</li>
                     
                   </ul>
                 </div>

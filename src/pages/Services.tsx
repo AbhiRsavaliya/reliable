@@ -19,7 +19,7 @@ const Services = () => {
       title: 'Landscape Design',
       shortDescription: 'Professional landscape design services including both hardscaping and softscaping solutions.',
       features: ['Design consultation', '3D landscape planning', 'Plant selection', 'Hardscape integration'],
-      image: '/img/land.jpg'
+      image: '/img/landnew.jpg'
     },
     {
       id: 'lawn-mowing',
@@ -51,7 +51,7 @@ const Services = () => {
       title: 'Mulching',
       shortDescription: 'Quality mulching services to protect plants and enhance garden aesthetics.',
       features: ['Organic mulch selection', 'Proper application', 'Weed suppression', 'Moisture retention'],
-      image: '/img/Mulch.jpg'
+      image: '/img/Mulchnew.jpg'
     },
     {
       id: 'garden-maintenance',
@@ -83,7 +83,7 @@ const Services = () => {
       title: 'Fencing',
       shortDescription: 'Custom fencing solutions for privacy, security, and aesthetic appeal.',
       features: ['Various fence materials', 'Custom design', 'Professional installation', 'Maintenance services'],
-      image: '/img/Fencing.jpg'
+      image: '/img/fencingnew.jpg'
     },
     {
       id: 'interlocking',
